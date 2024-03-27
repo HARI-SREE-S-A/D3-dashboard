@@ -1,28 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>D3 Dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/topojson@3"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>D3 Dashboard</h1>
-  <div class="visualization-container">
-    <h2>Choropleth Map</h2>
-    <div id="choropleth-map" class="visualization"></div>
-  </div>
-  <div class="visualization-container">
-    <h2>Network Map</h2>
-    <div id="network-map" class="visualization"></div>
-  </div>
-  <div class="visualization-container">
-    <h2>Arc Diagram</h2>
-    <div id="arc-diagram" class="visualization"></div>
-  </div>
-  <div class="visualization-container">
-    <h2>Heatmap Cartography</h2>
-    <div id="heatmap" class="visualization"></div>
-  </div>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="dashboard.js"></script>
+    <div id="app">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#choropleth">Choropleth Map</a></li>
+                <li><a href="#network">Network Map</a></li>
+                <li><a href="#bubble">Bubble Map</a></li>
+                <li><a href="#arc">Arc Diagrams</a></li>
+                <li><a href="#timeseries">Time Series Analysis</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="home">
+                <h1>D3 Dashboard</h1>
+                <div id="data-input">
+                    <!-- Add your data input component here -->
+                </div>
+            </section>
+            <section id="choropleth">
+                <h2>Choropleth Map</h2>
+                <div id="choropleth-map"></div>
+            </section>
+            <section id="network">
+                <h2>Network Map</h2>
+                <div id="network-map"></div>
+            </section>
+            <section id="bubble">
+                <h2>Bubble Map</h2>
+                <div id="bubble-map"></div>
+            </section>
+            <section id="arc">
+                <h2>Arc Diagrams</h2>
+                <div id="arc-diagrams"></div>
+            </section>
+            <section id="timeseries">
+                <h2>Time Series Analysis</h2>
+                <div id="time-series"></div>
+            </section>
+        </main>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
